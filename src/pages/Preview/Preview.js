@@ -27,7 +27,7 @@ const Preview = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const user = useSelector(selectUser);
+  const { username, profilePic } = useSelector(selectUser);
 
   const closePreview = () => {
     dispatch(resetCameraImage());
@@ -53,9 +53,9 @@ const Preview = () => {
           .then((url) => {
             db.collection("posts").add({
               imageUrl: url,
-              username: user.diplayedName,
+              username: username,
               read: false,
-              profilePic: user.profilePic,
+              profilePic: profilePic,
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
             history.replace("/chats");

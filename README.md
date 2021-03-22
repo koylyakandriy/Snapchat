@@ -8,5 +8,5 @@
 - yarn install
 - yarn start
 
-## or just follow this link [Snapchat Clone](https://revent-35b0d.firebaseapp.com/)
+## or just follow this link [Snapchat Clone](https://snepchat-clone.firebaseapp.com/)
 
